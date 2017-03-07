@@ -1,0 +1,49 @@
+<%@ page language="java" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <body>
+  	  <p>
+	  <marquee scrollamount="3" direction="right">
+	  	<img 
+	  		src="${pageContext.request.contextPath}/ads/ejb.jpg"
+	  		height="60px"	
+	  	/>
+	  	<img 
+	  		src="${pageContext.request.contextPath}/ads/j2ee.jpg"
+	  		height="60px"	
+	  	/>
+	  	<img 
+	  		src="${pageContext.request.contextPath}/ads/java.gif"
+	  		height="60px"	
+	  	/>
+	  	<img 
+	  		src="${pageContext.request.contextPath}/ads/javamail.gif"
+	  		height="60px"	
+	  	/>
+	  	<img 
+	  		src="${pageContext.request.contextPath}/ads/javascript.gif"
+	  		height="60px"	
+	  	/>
+	  	<img 
+	  		src="${pageContext.request.contextPath}/ads/javaweb1.gif"
+	  		height="60px"	
+	  	/>
+	  	<img 
+	  		src="${pageContext.request.contextPath}/ads/javaweb2.gif"
+	  		height="60px"	
+	  	/>
+	  	<img 
+	  		src="${pageContext.request.contextPath}/ads/jsf.jpg"
+	  		height="60px"	
+	  	/>
+	  	<img 
+	  		src="${pageContext.request.contextPath}/ads/oracle.gif"
+	  		height="60px"	
+	  	/>	  		
+	  	<img 
+	  		src="${pageContext.request.contextPath}/ads/spring.gif"
+	  		height="60px"	
+	  	/>	  	
+	  </marquee>
+  </body>
+</html>
