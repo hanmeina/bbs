@@ -12,7 +12,17 @@ public class Type {
 	 private Admin admin;
 	 //版块点击数
 	 private int click;
-	 public Type(){}
+	 //主题数
+	 private int topicNum;
+	 //最新主题
+	 private Topic topic;
+	 public Topic getTopic() {
+		return topic;
+	}
+	public void setTopic(Topic topic) {
+		this.topic = topic;
+	}
+	public Type(){}
 	public int getId() {
 		return id;
 	}
@@ -42,5 +52,11 @@ public class Type {
 	}
 	public void setAdmin(Admin admin) {
 		this.admin = admin;
+	}
+	public int getTopicNum() {
+		return topicNum;
+	}
+	public void setTopicNum(int topicNum) {
+		this.topicNum = topicNum;
 	}
 }

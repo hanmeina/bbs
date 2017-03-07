@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>bbs</display-name>
-  <welcome-file-list>
-    <welcome-file>welcome.jsp</welcome-file>
-  </welcome-file-list>
+  <filter>
+ 	<filter-name>IpAddressFilter</filter-name>
+ 	<filter-class>com.xjtu.bbs.filter.IpAddressFilter</filter-class>
+ </filter>
+ <filter-mapping>
+	<filter-name>IpAddressFilter</filter-name>
+	<url-pattern>/welcome.jsp</url-pattern> 
+ </filter-mapping> 	
+  <filter>
+    <display-name>EncodingFilter</display-name>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>com.xjtu.bbs.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+   <url-pattern>/BbsServlet</url-pattern>
+  </filter-mapping>
+<!--  
+ <listener>
+ 	<listener-class>com.xjtu.bbs.listener.SessionScannerListener</listener-class>
+ </listener>
+-->
+   <listener>
+ 	<listener-class>com.xjtu.bbs.listener.OnLineListener</listener-class>
+  </listener>
+ 
+ 
   <servlet>
     <description></description>
     <display-name>BbsServlet</display-name>
@@ -14,13 +38,9 @@
     <servlet-name>BbsServlet</servlet-name>
     <url-pattern>/BbsServlet</url-pattern>
   </servlet-mapping>
-  <filter>
-    <display-name>EncodingFilter</display-name>
-    <filter-name>EncodingFilter</filter-name>
-    <filter-class>com.xjtu.bbs.filter.EncodingFilter</filter-class>
-  </filter>
-  <filter-mapping>
-    <filter-name>EncodingFilter</filter-name>
-   <url-pattern>/BbsServlet</url-pattern>
-  </filter-mapping>
+  
+  
+  <welcome-file-list>
+    <welcome-file>welcome.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>

@@ -3,14 +3,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <script type="text/javascript">
-    	
-    	/*window.onbeforeunload=function(){
-    		var url = "/bbs/BbsServlet?method=exit";
-    		window.location.href = url;
-    	}*/
-    
-    </script>
+  
   	<style type="text/css">
   		a{
   			text-decoration:none
@@ -38,8 +31,8 @@
 	<div style="position:absolute;left:720;top:15">
 		你的IP：<font color="red">${sessionScope.address.ip}</font>
 		归属地：<font color="red">${sessionScope.address.location}</font><br/>
-		在线人数：<font color="red">0</font>人
-		你是第：<font color="red">1</font>个来访者
+	          在线人数：<font color="red">${!empty applicationScope.online?applicationScope.online:'0'}</font>人
+		你是第：<font color="red">${!empty sessionScope.caller?sessionScope.caller:'0'}</font>个来访者
 	</div>
   </body>
 </html>

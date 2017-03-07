@@ -94,7 +94,7 @@ create table flow(
  historydate date not null,
  num int not null default 200
 );
-insert into flow(historydate) values('2011-08-16');
+insert into flow(historydate) values(DATE_SUB(now(),INTERVAL 1 DAY));
 
 #普通用户表
 select * from user;
